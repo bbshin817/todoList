@@ -3,22 +3,22 @@
   "name": "todoList",
   "icons": [
     {
-      "src": "/icon/icon_512x512.webp",
+      "src": "./icon/icon_512x512.webp",
       "type": "image/webp",
       "sizes": "512x512"
     },
     {
-      "src": "/icon/icon_256x256.webp",
+      "src": "./icon/icon_256x256.webp",
       "type": "image/webp",
       "sizes": "256x256"
     },
     {
-      "src": "/icon/icon_128x128.webp",
+      "src": "./icon/icon_128x128.webp",
       "type": "image/webp",
       "sizes": "128x128"
     },
     {
-      "src": "/icon/icon_64x64.webp",
+      "src": "./icon/icon_64x64.webp",
       "type": "image/webp",
       "sizes": "64x64"
     }
