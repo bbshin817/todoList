@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>TodoList</title>
+	<meta name="theme-color" content="#f5f5f5">
+	<meta name="description" content="Plan It. Do It. Done.">
+	<link rel="icon" href="/favicon/favicon_256x256.webp" type="image/webp" sizes="256x256">
+	<link rel="icon" href="/favicon/favicon_128x128.webp" type="image/webp" sizes="128x128">
+	<link rel="icon" href="/favicon/favicon_64x64.webp" type="image/webp" sizes="64x64">
+	<link rel="apple-touch-icon" href="/icon/icon_512x512.webp" type="image/webp" sizes="512x512">
+	<link rel="apple-touch-icon" href="/icon/icon_256x256.webp" type="image/webp" sizes="256x256">
+	<link rel="apple-touch-icon" href="/icon/icon_128x128.webp" type="image/webp" sizes="128x128">
+	<link rel="apple-touch-icon" href="/icon/icon_64x64.webp" type="image/webp" sizes="64x64">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<script src="/main.js"></script>
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/service-worker.js')
+				.then(registration => {
+					console.log('Service Worker registered with scope:', registration.scope);
+				})
+				.catch(error => {
+					console.log('Service Worker registration failed:', error);
+				});
+		});
+	}
+</script>
+<body>
+	<app>
+		<div class="container append">
+			<div class="form-cover">
+				<input type="text" onkeyup="f.n(event);" placeholder="">
+				<button class="form-submit" onclick="f.n();">
+					<svg viewBox="0 0 20 20" fill="none">
+						<path fill="#fff" fill-rule="evenodd" d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="container list"></div>
+	</app>
+</body>
+</html>
