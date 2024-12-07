@@ -159,6 +159,7 @@ p.todo-body {
 }
 
 button.todo-comp {
+	flex-shrink: 0;
 	width: 22px;
 	aspect-ratio: 1/1;
 	margin-left: auto;
