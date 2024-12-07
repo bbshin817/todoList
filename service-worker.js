@@ -1,6 +1,6 @@
 const CACHE_NAME = 1;
 const FILES_TO_CACHE = [
-    "./",
+    "./index.html",
 	"./main.js",
 	"./css/style.css",
 	"./favicon/favicon_256x256.webp",
