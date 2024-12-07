@@ -1,1 +1,190 @@
-*{box-sizing:border-box}div::-webkit-scrollbar,div::-webkit-scrollbar-thumb{width:5px;border-radius:5px}div::-webkit-scrollbar{background-color:var(--alpha)}div::-webkit-scrollbar-thumb{background-color:var(--b01)}todo{display:block}#root{--alpha:rgba(0,0,0,0);--b01:rgba(0,0,0,.1);--b09:rgba(0,0,0,.9);--b005:rgba(0,0,0,.05)}body{position:relative;margin:0;font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;background-color:#f5f5f5;overflow:hidden;width:100%;height:100svh;-webkit-tap-highlight-color:var(--alpha)}input,button{outline:none;border:none;background-color:var(--alpha)}button{cursor:pointer}button:hover{opacity:.9}app{display:flex;flex-direction:column;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:700px;width:100%;padding:20px}div.container{width:100%}div.form-cover{display:flex;align-items:center;width:100%;padding:7.5px;background-color:#ebebeb;border-radius:32px}input{width:100%;padding:5px 10px;color:var(--b09)}button.form-submit,button.form-submit>svg{aspect-ratio:1/1}button.form-submit{cursor:pointer;position:relative;display:table;flex-shrink:0;width:32px;border-radius:32px;background-color:rgb(28,140,66)}button.form-submit>svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px}div.container.list{margin-top:50px;height:100%;overflow-y:scroll}todo{position:relative;width:100%;height:0;overflow:hidden;transition:.5s ease}todo[state="ready"]{opacity:0}todo>div{display:flex;width:100%;margin:10px 0;padding:12.5px 15px;border-radius:7.5px;background-color:#fff;border:1px solid var(--b01);box-shadow:0 1px 4px 0 var(--b005)}todo[state="ready"]>div{position:fixed;top:0;right:0;transform:translateX(100vw);opacity:0}todo:not(todo[state="ready"])>div{position:absolute;bottom:0;left:0;right:0}p.todo-body{margin:0;padding:0;font-size:12pt;color:var(--b09)}button.todo-comp{width:22px;aspect-ratio:1/1;margin-left:auto;background-image:url(/favicon/favicon_64x64.webp);background-position:center center;background-repeat:no-repeat;background-size:contain}@media screen and (max-width:699px){app{height:100%}input{font-size:14pt}}@media screen and (min-width:700px){app{min-height:500px;height:50vh}input{font-size:16pt}}
+* {
+	box-sizing: border-box
+}
+
+div::-webkit-scrollbar,
+div::-webkit-scrollbar-thumb {
+	width: 5px;
+	border-radius: 5px
+}
+
+div::-webkit-scrollbar {
+	background-color: var(--alpha)
+}
+
+div::-webkit-scrollbar-thumb {
+	background-color: var(--b01)
+}
+
+todo {
+	display: block
+}
+
+#root {
+	--alpha: rgba(0, 0, 0, 0);
+	--b01: rgba(0, 0, 0, .1);
+	--b09: rgba(0, 0, 0, .9);
+	--b005: rgba(0, 0, 0, .05)
+}
+
+body {
+	position: relative;
+	margin: 0;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	background-color: #f5f5f5;
+	overflow: hidden;
+	width: 100%;
+	height: 100svh;
+	-webkit-tap-highlight-color: var(--alpha)
+}
+
+input,
+button {
+	outline: none;
+	border: none;
+	background-color: var(--alpha)
+}
+
+button {
+	cursor: pointer
+}
+
+button:hover {
+	opacity: .9
+}
+
+app {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 700px;
+	width: 100%;
+	padding: 20px
+}
+
+div.container {
+	width: 100%
+}
+
+div.form-cover {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 7.5px;
+	background-color: #ebebeb;
+	border-radius: 32px
+}
+
+input {
+	width: 100%;
+	padding: 5px 10px;
+	color: var(--b09)
+}
+
+button.form-submit,
+button.form-submit>svg {
+	aspect-ratio: 1/1
+}
+
+button.form-submit {
+	cursor: pointer;
+	position: relative;
+	display: table;
+	flex-shrink: 0;
+	width: 32px;
+	border-radius: 32px;
+	background-color: rgb(28, 140, 66)
+}
+
+button.form-submit>svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 18px
+}
+
+div.container.list {
+	margin-top: 50px;
+	height: 100%;
+	overflow-y: scroll
+}
+
+todo {
+	position: relative;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	transition: .5s ease
+}
+
+todo[state="ready"] {
+	opacity: 0
+}
+
+todo>div {
+	display: flex;
+	width: 100%;
+	margin: 10px 0;
+	padding: 12.5px 15px;
+	border-radius: 7.5px;
+	background-color: #fff;
+	border: 1px solid var(--b01);
+	box-shadow: 0 1px 4px 0 var(--b005)
+}
+
+todo[state="ready"]>div {
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(100vw);
+	opacity: 0
+}
+
+todo:not(todo[state="ready"])>div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+p.todo-body {
+	margin: 0;
+	padding: 0;
+	font-size: 12pt;
+	color: var(--b09)
+}
+
+button.todo-comp {
+	width: 22px;
+	aspect-ratio: 1/1;
+	margin-left: auto;
+	background-image: url(../favicon/favicon_64x64.webp);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain
+}
+
+@media screen and (max-width:699px) {
+	app {
+		height: 100%
+	}
+
+	input {
+		font-size: 14pt
+	}
+}
+
+@media screen and (min-width:700px) {
+	app {
+		min-height: 500px;
+		height: 50vh
+	}
+
+	input {
+		font-size: 16pt
+	}
+}
