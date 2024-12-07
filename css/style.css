@@ -162,7 +162,7 @@ button.todo-comp {
 	width: 22px;
 	aspect-ratio: 1/1;
 	margin-left: auto;
-	background-image: url(./favicon/favicon_64x64.webp);
+	background-image: url(../favicon/favicon_64x64.webp);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain
