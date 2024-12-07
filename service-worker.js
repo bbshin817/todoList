@@ -1,15 +1,15 @@
 const CACHE_NAME = 1;
 const FILES_TO_CACHE = [
-    "/",
-	"/main.js",
-	"/css/style.css",
-	"/favicon/favicon_256x256.webp",
-	"/favicon/favicon_128x128.webp",
-	"/favicon/favicon_64x64.webp",
-	"/icon/icon_512x512.webp",
-	"/icon/icon_256x256.webp",
-	"/icon/icon_128x128.webp",
-	"/icon/icon_64x64.webp"
+    "./",
+	"./main.js",
+	"./css/style.css",
+	"./favicon/favicon_256x256.webp",
+	"./favicon/favicon_128x128.webp",
+	"./favicon/favicon_64x64.webp",
+	"./icon/icon_512x512.webp",
+	"./icon/icon_256x256.webp",
+	"./icon/icon_128x128.webp",
+	"./icon/icon_64x64.webp"
 ];
 
 self.addEventListener('install', (event) => {
